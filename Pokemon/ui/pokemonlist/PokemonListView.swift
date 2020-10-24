@@ -13,7 +13,8 @@ struct PokemonListView: View {
     
     var body: some View {
         VStack{
-            Text("Hello, World!")
+            Text("Pokemón")
+                .titleFont()
             SectionSpacerView(text: "List of Breeds")
                 .padding(.top, 30)
             VStack {

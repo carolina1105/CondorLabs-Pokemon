@@ -14,13 +14,11 @@ struct SectionSpacerView: View {
     var body: some View {
         HStack {
             Text(text.uppercased())
-//                .font(name: FontConfig.default.robotoRegular,
-//                      size: FontSizeConfig.default.text)
-//                .foregroundColor(ColorConfig.shared.secondaryText)
+                .textFont()
             Spacer()
         }.padding(.vertical, 10)
         .padding(.horizontal, 25)
-        .background(Color.gray)
+        .background(Color.nSection)
     }
 }
 
