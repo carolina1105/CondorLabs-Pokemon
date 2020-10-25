@@ -17,7 +17,8 @@ struct PokemonListView: View {
     
     @ObservedObject var pokemonVM = PokemonListViewModel.shared
     @State var showMenu = false
-    
+    @State var isActive: Bool = false
+
     var body: some View {
         let drag = DragGesture()
             .onEnded {
@@ -34,11 +35,24 @@ struct PokemonListView: View {
                     ListPageView(values: self.$pokemonVM.pokemon,
                                  isLoading: $pokemonVM.isLoading,
                                  nextPage: {self.pokemonVM.getPokemonByPage()}) { pokemon in
-                        Text(pokemon.name)
+                        Button { 
+                            self.pokemonVM.namePokemon = pokemon.name
+                            self.pokemonVM.pokemonDetail(success: {
+                                self.isActive = true
+                            })
+
+                        } label: { 
+                            Text(pokemon.name)
+                                .textFont()
+                        }
                     }
                 }
                 Spacer()
                 NavigationContent()
+                NavigationLink(destination: PokemonDetailView(),
+                               isActive: $isActive) {
+                    Text("")
+                }
             }
             .navigationBarItems(leading: Button(action: {
                 self.animateIn()

@@ -1,5 +1,5 @@
 //
-//  GenerationRepository.swift
+//  PokemonDetailRepository.swift
 //  Pokemon
 //
 //  Created by Laddy Diaz Lamus on 25/10/20.
@@ -9,26 +9,26 @@ import Foundation
 import RealmSwift
 import RxRealm
 
-class GenerationRepository {
+class PokemonDetailRepository {
     
-    static let shared = GenerationRepository()
+    static let shared = PokemonDetailRepository()
     var errorUtility = ErrorUtility.shared
     
-    private var manager = GenerationWS.shared
+    private var manager = PokemonDetailWS.shared
     private var database = PokemonDB.shared
     private var defaults = DefaultsConfig.shared
     private var fileManager = FileManager.default
     
-    func generations(type: Int,
-                     success: @escaping (GenerationModel) -> Void,
-                     failure: @escaping (String) -> Void) {
-        manager.generations(type: type) { (generations, error) in
+    func pokemonDetail(name: String,
+                       success: @escaping (PokemonDetailModel) -> Void,
+                       failure: @escaping (String) -> Void) {
+        manager.pokemonDetail(name: name) { (detail, error) in
             if error != nil {
                 failure(error!.error)
                 return
             }
-            if generations != nil {
-                let model = GenerationModel.toModel(dto: generations!)
+            if detail != nil {
+                let model = PokemonDetailModel.toModel(dto: detail!)
                 success(model)
                 return
             } else {

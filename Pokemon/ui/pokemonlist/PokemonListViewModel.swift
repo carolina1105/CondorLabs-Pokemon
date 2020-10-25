@@ -7,8 +7,6 @@
 
 import Foundation
 import SwiftUI
-import Firebase
-import UIKit
 
 class PokemonListViewModel: ObservableObject {
     static let shared = PokemonListViewModel()
@@ -18,13 +16,14 @@ class PokemonListViewModel: ObservableObject {
     var count = 0
     var poke: [PokemonModel] = []
     var repository = PokemonListRepository.shared
-    private var nextPage: Int = 0
-    
+    var repositoryPokemonDetail = PokemonDetailRepository.shared
+    private var nextPage: Int = 0    
     
     @Published var pokemon: [PokemonModel] = []
     @Published var isLoading: Bool = false
     @Published var activeSection: Int? = nil
-
+    @Published var namePokemon: String = ""
+    
     func pokemonList() {
         isLoading = true
         pokemon = []
@@ -42,7 +41,6 @@ class PokemonListViewModel: ObservableObject {
             print("error.... \(error)")
         }
     }
-    
     
     func getPokemonByPage()  {
         repository.pokemonList(page: nextPage, 
@@ -64,4 +62,17 @@ class PokemonListViewModel: ObservableObject {
         let array2 = array[1].components(separatedBy: "&")
         return Int(array2[0]) ?? .zero
     } 
+    
+    func pokemonDetail(success: @escaping () -> Void) {
+        isLoading = true
+        repositoryPokemonDetail.pokemonDetail(name: namePokemon) { data in
+            
+            self.isLoading = false
+            success()
+        } failure: { error in
+            self.isLoading = false
+            //TODO: Manejar el caso de error
+            print("error.... \(error)")
+        }
+    }
 }

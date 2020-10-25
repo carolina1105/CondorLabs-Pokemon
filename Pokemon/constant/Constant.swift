@@ -25,6 +25,7 @@ fileprivate let defSocketID                    = "X-Socket-ID"
 // End-points
 fileprivate let defPokemonPage                 = "/pokemon?limit=%d&offset=%d"
 fileprivate let defGenerations                 = "/generation/%d/"
+fileprivate let defPokemonDetail               = "/pokemon/%@/"
 
 fileprivate let defSecretKey                   = "SecretKey"
 
@@ -40,6 +41,7 @@ struct Constant {
     let socketID                    : String
     let pokemonPage                 : String
     let generations                 : String
+    let pokemonDetail               : String
     let secretKey                   : String
     
     static let `default` = Constant(serverUrl                   : defServerUrl,
@@ -51,6 +53,7 @@ struct Constant {
                                     apiKey                      : defApiKey,
                                     socketID                    : defSocketID,
                                     pokemonPage                 : defPokemonPage, 
-                                    generations                 : defGenerations,
+                                    generations                 : defGenerations, 
+                                    pokemonDetail               : defPokemonDetail,
                                     secretKey                   : defSecretKey)
 }
