@@ -11,8 +11,6 @@ import SwiftUI
 class PokemonListViewModel: ObservableObject {
     static let shared = PokemonListViewModel()
     
-    let defaults = DefaultsConfig.shared
-    let keychain = KeychainConfig.shared
     var count = 0
     var poke: [PokemonModel] = []
     var repository = PokemonListRepository.shared

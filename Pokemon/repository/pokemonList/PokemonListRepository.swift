@@ -1,34 +1,35 @@
 //
-//  GenerationRepository.swift
+//  PokemonListRepository.swift
 //  Pokemon
 //
-//  Created by Laddy Diaz Lamus on 25/10/20.
+//  Created by Laddy Diaz Lamus on 24/10/20.
 //
 
 import Foundation
 import RealmSwift
 import RxRealm
 
-class GenerationRepository {
+class PokemonListRepository {
     
-    static let shared = GenerationRepository()
+    static let shared = PokemonListRepository()
     var errorUtility = ErrorUtility.shared
     
-    private var manager = GenerationWS.shared
+    private var manager = PokemonListWS.shared
     private var database = PokemonDB.shared
-    private var defaults = DefaultsConfig.shared
     private var fileManager = FileManager.default
     
-    func generations(type: Int,
-                     success: @escaping (GenerationModel) -> Void,
+    func pokemonList(page: Int? = nil,
+                     limit: Int? = nil,
+                     success: @escaping (PokemonPageModel) -> Void,
                      failure: @escaping (String) -> Void) {
-        manager.generations(type: type) { (generations, error) in
+        manager.pokemonList(page: String(page ?? 0),
+                            limit: limit ?? 20) { data, error in
             if error != nil {
                 failure(error!.error)
                 return
             }
-            if generations != nil {
-                let model = GenerationModel.toModel(dto: generations!)
+            if data != nil {
+                let model = PokemonPageModel.toModel(dto: data!)
                 success(model)
                 return
             } else {
@@ -36,7 +37,6 @@ class GenerationRepository {
             }
             failure("error@@")
         }
-        
     }
     
     func dispose(with id: AnyHashable) {

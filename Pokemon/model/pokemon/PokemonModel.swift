@@ -11,14 +11,16 @@ struct PokemonModel: Identifiable, Codable, Hashable {
     var id: Int?
     var name: String
     var url: String
-    
-    
+    var votingStatus: Int
+
     init(id: Int? = Int.random(in: 1...200),
          name: String = "",
-         url: String = "") {
+         url: String = "",
+         votingStatus: Int = 0) {
         self.id = id
         self.name = name
         self.url = url
+        self.votingStatus = votingStatus
     }
     
     static func toModel(dto: PokemonResDTO) -> PokemonModel {
@@ -37,5 +39,6 @@ struct PokemonModel: Identifiable, Codable, Hashable {
 extension PokemonModel {
     static var empty = PokemonModel(id: .zero, 
                                     name: "", 
-                                    url: "")
+                                    url: "",
+                                    votingStatus: 0)
 }

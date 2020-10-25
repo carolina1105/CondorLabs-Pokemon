@@ -18,7 +18,7 @@ class GenerationWS {
         let url = endPoints.serverUrl + String(format: endPoints.generations, type)
         
         //TODO make2
-        manager.make2(url: url, 
+        manager.make(url: url, 
                       method: .get, 
                       success: { data in 
                         let generations: GenerationResDTO? = ResDTO.toDTO(data: data)

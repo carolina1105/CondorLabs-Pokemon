@@ -19,7 +19,7 @@ class PokemonListWS {
         let pageNext: Int = Int(page) ?? .zero
         let url = endPoints.serverUrl + String(format: endPoints.pokemonPage, limit, pageNext)
         
-        manager.make2(url: url, 
+        manager.make(url: url, 
                       method: .get, 
                       success: { data in 
                         let pokemon: PokemonPageResDTO? = ResDTO.toDTO(data: data)

@@ -13,8 +13,6 @@ import UIKit
 class GenerationsViewModel: ObservableObject {
     static let shared = GenerationsViewModel()
     
-    let defaults = DefaultsConfig.shared
-    let keychain = KeychainConfig.shared
     var count = 0
     var poke: [PokemonModel] = []
     var repositoryGeneration = GenerationRepository.shared

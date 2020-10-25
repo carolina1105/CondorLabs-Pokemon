@@ -16,7 +16,6 @@ class PokemonDetailRepository {
     
     private var manager = PokemonDetailWS.shared
     private var database = PokemonDB.shared
-    private var defaults = DefaultsConfig.shared
     private var fileManager = FileManager.default
     
     func pokemonDetail(name: String,

@@ -17,7 +17,7 @@ class PokemonDetailWS {
                        completion: @escaping (PokemonDetailResDTO?, ErrorDTO?) -> Void ) {
         let url = endPoints.serverUrl + String(format: endPoints.pokemonDetail, name)
         
-        manager.make2(url: url, 
+        manager.make(url: url, 
                       method: .get, 
                       success: { data in 
                         let pokemon: PokemonDetailResDTO? = ResDTO.toDTO(data: data)

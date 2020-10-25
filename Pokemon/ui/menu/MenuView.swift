@@ -16,7 +16,6 @@ struct MenuView: View {
     private let opacity: Double = 0.4
     private let spacing: CGFloat = 0
     private let cellSize: CGFloat = 44
-    private let defaults = DefaultsConfig.shared
     private let top: CGFloat = 20
     private let maxTop: CGFloat = 30
     
