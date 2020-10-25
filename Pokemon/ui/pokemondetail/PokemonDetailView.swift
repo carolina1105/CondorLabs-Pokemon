@@ -68,6 +68,10 @@ struct PokemonDetailView: View {
                         MovesView(moves: pokemon.moves)
                             .padding(.top, 10)
                     }
+                    
+                    SectionSpacerView(text: "SPRITES")
+                        .padding(.top)
+                    SpriteView(sprites: pokemon.sprites)
                 } 
             }
             Spacer()
@@ -82,7 +86,6 @@ struct PokemonDetailView: View {
 struct MovesView: View {
     var padding: CGFloat = 10
     var moves: [MovesModel]
-    
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {

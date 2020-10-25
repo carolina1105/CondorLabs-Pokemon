@@ -11,13 +11,6 @@ def common
   pod 'Firebase'
   pod 'Firebase/Messaging'
   pod 'Firebase/Crashlytics'
-  pod 'PureLayout'
-  pod 'MarqueeLabel'
-  pod 'ISEmojiView'
-  pod 'Giphy'
-  pod 'GoogleWebRTC'
-  pod 'PusherSwift'
-  pod 'SwiftyStoreKit'
 end
 
 def shared
@@ -28,18 +21,13 @@ target 'Pokemon' do
   common
   shared
   pod 'LanguagesManager'
-  pod 'lottie-ios'
-  pod 'TransitionButton'
-  pod 'CropViewController'
   pod 'NVActivityIndicatorView'
 end
 
   target 'PokemonTests' do
   common
-  pod 'RxBlocking'
 end
 
   target 'PokemonUITests' do
   common
-  pod 'RxBlocking'
 end
