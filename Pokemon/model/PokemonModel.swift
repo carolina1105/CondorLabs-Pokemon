@@ -13,13 +13,12 @@ struct PokemonModel: Identifiable, Codable, Hashable {
     var url: String
 
     
-    init(id: Int = Int.random(in: 1...100),
+    init(id: Int = Int.random(in: 1...200),
          name: String = "",
          url: String = "") {
         self.id = id
         self.name = name
         self.url = url
-
     }
     
     static func toModel(dto: PokemonResDTO) -> PokemonModel {

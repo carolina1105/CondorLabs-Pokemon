@@ -63,9 +63,5 @@ class PokemonListViewModel: ObservableObject {
         let array =  text.components(separatedBy: "=")
         let array2 = array[1].components(separatedBy: "&")
         return Int(array2[0]) ?? .zero
-        
-    }
-    
-    
-    
+    } 
 }

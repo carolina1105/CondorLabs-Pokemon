@@ -46,7 +46,7 @@ struct NavigationBarModifier: ViewModifier {
 }
 
 extension View {
-    func navigationBarColor(_ backgroundColor: UIColor?, textColor: UIColor = UIColor.nPrimaryText!) -> some View {
+    func navigationBarColor(_ backgroundColor: UIColor?, textColor: UIColor = UIColor.nSecondary!) -> some View {
         self.modifier(NavigationBarModifier(backgroundColor: backgroundColor,
                                             textColor: textColor))
     }

@@ -15,6 +15,7 @@ struct ButtonPrimary: View {
     var textColor: Color = Color.nSecondaryText
     var decoration: DecorationType = .bold
     var color: Color = Color.nPrimary
+    var isSelected: Bool?
     var action: () -> Void
     
     var body: some View {
@@ -29,7 +30,7 @@ struct ButtonPrimary: View {
                               decoration: .bold)
                 Spacer()
             }.padding(.vertical, padding)
-            .background(color)
+            .background(isSelected ?? false ? Color.nFourth : color)
             .cornerRadius(cornerRadius)
         }.buttonStyle(PlainButtonStyle())
     }
@@ -48,9 +49,10 @@ struct ButtonSecondary: View {
     let cornerRadius: CGFloat = 8
     
     var text: String
-    var color: Color = Color.nTint
+    var color: Color = Color.nPrimary
     var colorBackground = Color.clear
     var decoration: DecorationType = .bold
+    var isSelected: Bool?
     var border: CGFloat = 2
     var action: () -> Void
     
@@ -62,12 +64,12 @@ struct ButtonSecondary: View {
                 Spacer()
                 Text(text)
                     .lineLimit(1)
-                    .textFont(color: color,
+                    .textFont(color: isSelected ?? false ? Color.nFourth : color,
                               decoration: decoration)
                 Spacer()
             }.padding(.vertical, padding)
             .overlay(RoundedRectangle(cornerRadius: cornerRadius)
-                        .stroke(color, lineWidth: border))
+                        .stroke(isSelected ?? false ? Color.nFourth : color, lineWidth: border))
             .background(colorBackground)
         }.buttonStyle(PlainButtonStyle())
     }

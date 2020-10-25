@@ -49,13 +49,13 @@ struct PokemonListView: View {
                     Image(systemName: "line.horizontal.3")
                         .font(.system(size: self.iconSize))
                         .foregroundColor(Color.nSecondary)
-                    Text("Pokémon").font(name: FontConfig.default.robotoBold,
-                                          size: FontSizeConfig.default.title)
+                    Text("Pokémon")
+                        .titleFont(color: Color.nSecondary)
                 }.offset(x: self.offsetXBar)
             })
             .gesture(drag)
             .navigationBarTitle("")
-            .navigationBarColor(UIColor.nTint)
+            .navigationBarColor(UIColor.nThird)
             .edgesIgnoringSafeArea(.bottom)
             .onAppear{
                 pokemonVM.pokemonList()
@@ -106,12 +106,12 @@ struct NavigationContent: View {
     
     var body: some View {
         ZStack {
-            NavigationLink(destination: GenerationsPokemonView(),
+            NavigationLink(destination: GenerationsView(),
                            tag: generationTag,
                            selection: $pokemonVM.activeSection) {
                 Text("")
             }
-            NavigationLink(destination: GenerationsPokemonView(),
+            NavigationLink(destination: GenerationsView(),
                            tag: voteTag,
                            selection: $pokemonVM.activeSection) {
                 Text("")

@@ -12,13 +12,12 @@ class PokemonListWS {
     static let shared = PokemonListWS()
     let endPoints = Constant.default    
     var manager = ManagerWS.shared
-
+    
     func pokemonList(page: String,
-                    limit: Int = 10,
-                    completion: @escaping (PokemonPageResDTO?, ErrorDTO?) -> Void ) {
-        let num: Int = Int(page) ?? 0
-        var url = endPoints.serverUrl + String(format: endPoints.pokemonPage, limit, num)
-
+                     limit: Int = 10,
+                     completion: @escaping (PokemonPageResDTO?, ErrorDTO?) -> Void ) {
+        let pageNext: Int = Int(page) ?? .zero
+        let url = endPoints.serverUrl + String(format: endPoints.pokemonPage, limit, pageNext)
         
         manager.make2(url: url, 
                       method: .get, 
@@ -29,7 +28,6 @@ class PokemonListWS {
                             return
                         }
                       }) { (nil, error) in
-            
         }
     }
 }
