@@ -30,13 +30,13 @@ struct ListPageView<T,Content>: View where T:Identifiable, Content:View {
     var body: some View {
         VStack {
             if values.count > .zero {
-               List {
-                ForEach(values) { value in
+                List {
+                    ForEach(values) { value in
                         VStack {
                             self.content(value)
                                 .onAppear {
                                     self.listItemAppears(value)
-                            }
+                                }
                             if self.$isLoading.wrappedValue && self.values.isLastItem(value) {
                                 HStack {
                                     Spacer()

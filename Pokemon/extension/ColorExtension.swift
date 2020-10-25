@@ -23,6 +23,7 @@ extension Color {
     static let nSecondaryText = Color("SecondaryText")
     static let nSection = Color("Section")
     static let nThird = Color("Third")
+    static let nTint = Color("Tint")
 }
 
 extension UIColor {
@@ -39,7 +40,8 @@ extension UIColor {
     static let nSecondaryDark = UIColor(named: "SecondaryDark")
     static let nSecondaryLight = UIColor(named: "SecondaryLight")
     static let nSecondaryText = UIColor(named: "SecondaryText")
-    static let nSection = Color("Section")
-    static let nThird = Color("Third")
+    static let nSection = UIColor(named: "Section")
+    static let nThird = UIColor(named: "Third")
+    static let nTint = UIColor(named: "Tint")
 }
 

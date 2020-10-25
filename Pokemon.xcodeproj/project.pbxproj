@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -43,6 +43,15 @@
 		18BFD5BE25448C20008AF4F6 /* ListPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD5BD25448C20008AF4F6 /* ListPageView.swift */; };
 		18BFD6862544DB11008AF4F6 /* FontsModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD6852544DB11008AF4F6 /* FontsModifiers.swift */; };
 		18BFD68F2544DD35008AF4F6 /* FontUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD68E2544DD34008AF4F6 /* FontUtility.swift */; };
+		18BFD6C72544E486008AF4F6 /* CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD6C62544E486008AF4F6 /* CornerRadiusStyle.swift */; };
+		18BFD6CC2544E50D008AF4F6 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD6CB2544E50D008AF4F6 /* Buttons.swift */; };
+		18BFD6DD2544EFA3008AF4F6 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD6DC2544EFA3008AF4F6 /* NavigationBarModifier.swift */; };
+		18BFD6E22544FADA008AF4F6 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD6E12544FADA008AF4F6 /* MenuView.swift */; };
+		18BFD75025451151008AF4F6 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 18BFD74F25451151008AF4F6 /* SDWebImageSwiftUI */; };
+		18BFD7852545132A008AF4F6 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD7842545132A008AF4F6 /* MenuViewModel.swift */; };
+		18BFD78E254513D5008AF4F6 /* MenuCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD78D254513D5008AF4F6 /* MenuCellView.swift */; };
+		18BFD793254514CA008AF4F6 /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD792254514CA008AF4F6 /* MenuItemModel.swift */; };
+		18BFD7A0254534DC008AF4F6 /* GenerationsPokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD79F254534DC008AF4F6 /* GenerationsPokemonView.swift */; };
 		4DF2ECC7B51973DD4B82BB7F /* Pods_PokemonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BFA6BEE5E9D572A3B0D34B /* Pods_PokemonUITests.framework */; };
 		58C195F12C74CF69FC6E637A /* Pods_Pokemon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6288F860BFC64E902D286CCC /* Pods_Pokemon.framework */; };
 		F8FCFB4496BF52E8665A1948 /* Pods_PokemonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B94DB2885C99AD923205A3 /* Pods_PokemonTests.framework */; };
@@ -112,6 +121,14 @@
 		18BFD5BD25448C20008AF4F6 /* ListPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageView.swift; sourceTree = "<group>"; };
 		18BFD6852544DB11008AF4F6 /* FontsModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsModifiers.swift; sourceTree = "<group>"; };
 		18BFD68E2544DD34008AF4F6 /* FontUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontUtility.swift; sourceTree = "<group>"; };
+		18BFD6C62544E486008AF4F6 /* CornerRadiusStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusStyle.swift; sourceTree = "<group>"; };
+		18BFD6CB2544E50D008AF4F6 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		18BFD6DC2544EFA3008AF4F6 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		18BFD6E12544FADA008AF4F6 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		18BFD7842545132A008AF4F6 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		18BFD78D254513D5008AF4F6 /* MenuCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellView.swift; sourceTree = "<group>"; };
+		18BFD792254514CA008AF4F6 /* MenuItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
+		18BFD79F254534DC008AF4F6 /* GenerationsPokemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsPokemonView.swift; sourceTree = "<group>"; };
 		1A323C42FD124ED57E3E6619 /* Pods-PokemonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonTests.debug.xcconfig"; path = "Target Support Files/Pods-PokemonTests/Pods-PokemonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		28483C6CB3054D8DC2753C25 /* Pods-Pokemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon.release.xcconfig"; path = "Target Support Files/Pods-Pokemon/Pods-Pokemon.release.xcconfig"; sourceTree = "<group>"; };
 		2A62D5171210049158F78677 /* Pods-Pokemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon.debug.xcconfig"; path = "Target Support Files/Pods-Pokemon/Pods-Pokemon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BFD75025451151008AF4F6 /* SDWebImageSwiftUI in Frameworks */,
 				58C195F12C74CF69FC6E637A /* Pods_Pokemon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,11 +240,14 @@
 		18BFD45E25446EBE008AF4F6 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				18BFD6D02544E51A008AF4F6 /* components */,
 				18BFD514254476D2008AF4F6 /* LoadingView.swift */,
 				18BFD50F254476AC008AF4F6 /* SectionSpacerView.swift */,
 				18BFD4FA25447642008AF4F6 /* content */,
 				18BFD50825447685008AF4F6 /* pokemonlist */,
 				18BFD68A2544DB25008AF4F6 /* modifiers */,
+				18BFD78925451341008AF4F6 /* menu */,
+				18BFD7A425453526008AF4F6 /* generations */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -296,6 +317,7 @@
 			children = (
 				18BFD51925447708008AF4F6 /* PokemonModel.swift */,
 				18BFD52525447E4E008AF4F6 /* PokemonPageModel.swift */,
+				18BFD792254514CA008AF4F6 /* MenuItemModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -349,8 +371,36 @@
 			isa = PBXGroup;
 			children = (
 				18BFD6852544DB11008AF4F6 /* FontsModifiers.swift */,
+				18BFD6C62544E486008AF4F6 /* CornerRadiusStyle.swift */,
+				18BFD6DC2544EFA3008AF4F6 /* NavigationBarModifier.swift */,
 			);
 			path = modifiers;
+			sourceTree = "<group>";
+		};
+		18BFD6D02544E51A008AF4F6 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				18BFD6CB2544E50D008AF4F6 /* Buttons.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		18BFD78925451341008AF4F6 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				18BFD6E12544FADA008AF4F6 /* MenuView.swift */,
+				18BFD78D254513D5008AF4F6 /* MenuCellView.swift */,
+				18BFD7842545132A008AF4F6 /* MenuViewModel.swift */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
+		18BFD7A425453526008AF4F6 /* generations */ = {
+			isa = PBXGroup;
+			children = (
+				18BFD79F254534DC008AF4F6 /* GenerationsPokemonView.swift */,
+			);
+			path = generations;
 			sourceTree = "<group>";
 		};
 		49C08D177F70F03B076B6DC2 /* Frameworks */ = {
@@ -394,6 +444,9 @@
 			dependencies = (
 			);
 			name = Pokemon;
+			packageProductDependencies = (
+				18BFD74F25451151008AF4F6 /* SDWebImageSwiftUI */,
+			);
 			productName = Pokemon;
 			productReference = 18BFD42D25446C33008AF4F6 /* Pokemon.app */;
 			productType = "com.apple.product-type.application";
@@ -470,6 +523,9 @@
 				Base,
 			);
 			mainGroup = 18BFD42425446C32008AF4F6;
+			packageReferences = (
+				18BFD74E25451151008AF4F6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 18BFD42E25446C33008AF4F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -636,6 +692,7 @@
 				18BFD56E25448767008AF4F6 /* PokemonEntity.swift in Sources */,
 				18BFD4D825447547008AF4F6 /* ColorExtension.swift in Sources */,
 				18BFD4FC25447667008AF4F6 /* PokemonListView.swift in Sources */,
+				18BFD7852545132A008AF4F6 /* MenuViewModel.swift in Sources */,
 				18BFD4C2254474B3008AF4F6 /* KeychainConfig.swift in Sources */,
 				18BFD52625447E4E008AF4F6 /* PokemonPageModel.swift in Sources */,
 				18BFD578254487DD008AF4F6 /* PokemonDB.swift in Sources */,
@@ -645,16 +702,23 @@
 				18BFD6862544DB11008AF4F6 /* FontsModifiers.swift in Sources */,
 				18BFD50425447680008AF4F6 /* PokemonListViewModel.swift in Sources */,
 				18BFD54425448306008AF4F6 /* ManagerWS.swift in Sources */,
+				18BFD6E22544FADA008AF4F6 /* MenuView.swift in Sources */,
 				18BFD515254476D2008AF4F6 /* LoadingView.swift in Sources */,
 				18BFD55A25448394008AF4F6 /* ErrorDTO.swift in Sources */,
+				18BFD6DD2544EFA3008AF4F6 /* NavigationBarModifier.swift in Sources */,
 				18BFD43325446C33008AF4F6 /* ContentView.swift in Sources */,
 				18BFD51A25447708008AF4F6 /* PokemonModel.swift in Sources */,
 				18BFD4F32544761D008AF4F6 /* Threading.swift in Sources */,
+				18BFD78E254513D5008AF4F6 /* MenuCellView.swift in Sources */,
+				18BFD7A0254534DC008AF4F6 /* GenerationsPokemonView.swift in Sources */,
 				18BFD47125446F17008AF4F6 /* StringExtension.swift in Sources */,
 				18BFD43125446C33008AF4F6 /* PokemonApp.swift in Sources */,
 				18BFD4E7254475EF008AF4F6 /* ErrorUtility.swift in Sources */,
 				18BFD46025446ED3008AF4F6 /* Constant.swift in Sources */,
+				18BFD793254514CA008AF4F6 /* MenuItemModel.swift in Sources */,
 				18BFD52B25447F69008AF4F6 /* PokemonResDTO.swift in Sources */,
+				18BFD6CC2544E50D008AF4F6 /* Buttons.swift in Sources */,
+				18BFD6C72544E486008AF4F6 /* CornerRadiusStyle.swift in Sources */,
 				18BFD68F2544DD35008AF4F6 /* FontUtility.swift in Sources */,
 				18BFD4CE254474E7008AF4F6 /* DefaultsConfig.swift in Sources */,
 				18BFD5BE25448C20008AF4F6 /* ListPageView.swift in Sources */,
@@ -988,6 +1052,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18BFD74E25451151008AF4F6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18BFD74F25451151008AF4F6 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18BFD74E25451151008AF4F6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18BFD42525446C32008AF4F6 /* Project object */;
 }
