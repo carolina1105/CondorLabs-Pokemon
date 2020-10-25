@@ -179,34 +179,14 @@ class ManagerWS {
     func getBody(_ parameters: [String : Any]?,
                  _ encrypted: Bool) -> [String : Any]?  {
         var body: [String : Any]?
-        let environmentType  = EnvironmentType(rawValue: Constant.default.environmentType)
-        switch environmentType {
-        case .local:
-            body = parameters
-        case .development, .production:
-            body =  parameters
-        //            case .production:
-        //                body = encrypted ? encrypt(parameters) : parameters
-        case .none:
-            body = nil
-        }
+        body = parameters
         return body
     }
     
     func getData(_ response: Data?,
                  _ encrypted: Bool) -> Data? {
         var data: Data?
-        let environmentType  = EnvironmentType(rawValue: Constant.default.environmentType)
-        switch environmentType {
-        case .local:
-            data = response
-        case .development, .production:
-            data = response
-        //            case .production:
-        //                data = encrypted ? decrypt(response) : response
-        case .none:
-            data = nil
-        }
+        data = response
         return data
     }
     

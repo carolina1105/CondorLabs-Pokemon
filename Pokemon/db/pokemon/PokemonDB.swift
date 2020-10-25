@@ -32,6 +32,7 @@ class PokemonDB {
         }
         return entitiy
     }
+    
 //    func pokemon(vottingSucces: Int) -> PokemonEntity? {
 //        let entitiy : PokemonEntity?
 //
