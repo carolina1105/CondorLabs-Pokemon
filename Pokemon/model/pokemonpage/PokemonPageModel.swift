@@ -48,3 +48,26 @@ struct PokemonPageModel: Codable, Equatable {
         return model
     }
 }
+
+
+extension PokemonPageModel {
+    static var mock = PokemonPageModel(count: 200 ,
+                                       next: "100", 
+                                       previous: "10", 
+                                       results: [PokemonModel(id: 1, 
+                                                              name: "dunsparce", 
+                                                              url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                                              votingStatus: .zero),
+                                                 PokemonModel(id: 1, 
+                                                              name: "pikachu", 
+                                                              url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                                              votingStatus: .zero),
+                                                 PokemonModel(id: 1, 
+                                                              name: "sneasel", 
+                                                              url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                                              votingStatus: .zero),
+                                                 PokemonModel(id: 1, 
+                                                              name: "ursaring", 
+                                                              url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                                              votingStatus: .zero)])
+}

@@ -56,3 +56,8 @@ extension MoveModel {
     static var empty = MoveModel(name: "", 
                                  url: "")
 }
+
+extension MoveModel {
+    static var mock = MoveModel(name: "tackle", 
+                                url: "https://pokeapi.co/api/v2/move/33/")
+}

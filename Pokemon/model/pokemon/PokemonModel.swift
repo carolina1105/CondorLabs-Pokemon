@@ -40,5 +40,12 @@ extension PokemonModel {
     static var empty = PokemonModel(id: .zero, 
                                     name: "", 
                                     url: "",
-                                    votingStatus: 0)
+                                    votingStatus: .zero)
+}
+
+extension PokemonModel {
+    static var mock = PokemonModel(id: 1, 
+                                    name: "dunsparce", 
+                                    url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                    votingStatus: .zero)
 }

@@ -23,7 +23,26 @@ struct GenerationModel: Codable, Hashable  {
                                     pokemonSpecies: PokemonModel.toModels(dto: dto.pokemonSpecies))
         return model
     }
-
+    
 }
 
 
+extension GenerationModel {
+    static var mock = GenerationModel(name: "Slock",
+                                      pokemonSpecies: [PokemonModel(id: 1, 
+                                                                    name: "dunsparce", 
+                                                                    url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                                                    votingStatus: .zero),
+                                                       PokemonModel(id: 1, 
+                                                                    name: "pikachu", 
+                                                                    url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                                                    votingStatus: .zero),
+                                                       PokemonModel(id: 1, 
+                                                                    name: "sneasel", 
+                                                                    url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                                                    votingStatus: .zero),
+                                                       PokemonModel(id: 1, 
+                                                                    name: "ursaring", 
+                                                                    url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                                                    votingStatus: .zero)])
+}
