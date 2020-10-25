@@ -18,7 +18,7 @@ struct PokemonListView: View {
     @ObservedObject var pokemonVM = PokemonListViewModel.shared
     @State var showMenu = false
     @State var isActive: Bool = false
-
+    
     var body: some View {
         let drag = DragGesture()
             .onEnded {
@@ -40,7 +40,7 @@ struct PokemonListView: View {
                             self.pokemonVM.pokemonDetail(success: {
                                 self.isActive = true
                             })
-
+                            
                         } label: { 
                             Text(pokemon.name)
                                 .textFont()
@@ -49,7 +49,7 @@ struct PokemonListView: View {
                 }
                 Spacer()
                 NavigationContent()
-                NavigationLink(destination: PokemonDetailView(),
+                NavigationLink(destination: PokemonDetailView(namePokemon: pokemonVM.namePokemon, pokemon: pokemonVM.pokemonDetail),
                                isActive: $isActive) {
                     Text("")
                 }

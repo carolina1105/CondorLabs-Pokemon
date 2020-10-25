@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GenerationsView: View {
     private let padding: CGFloat = 5
-     
+    
     @ObservedObject var generationsVM = GenerationsViewModel.shared
     @State var isActive: Bool = false
     
@@ -59,7 +59,7 @@ struct GenerationsView: View {
                     }
                 }
             }
-            NavigationLink(destination: PokemonDetailView(),
+            NavigationLink(destination: PokemonDetailView(namePokemon: self.generationsVM.namePokemon, pokemon: self.generationsVM.pokemonDetail),
                            isActive: $isActive) {
                 Text("")
             }

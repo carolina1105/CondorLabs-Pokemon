@@ -63,6 +63,14 @@
 		18BFD8972545CAFD008AF4F6 /* PokemonDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD8962545CAFD008AF4F6 /* PokemonDetailRepository.swift */; };
 		18BFD8A62545CEA2008AF4F6 /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD8A52545CEA2008AF4F6 /* PokemonDetailView.swift */; };
 		18BFD8AB2545CEB7008AF4F6 /* PokemonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD8AA2545CEB7008AF4F6 /* PokemonDetailViewModel.swift */; };
+		18BFD8F52545FF6B008AF4F6 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18BFD8EF2545FF69008AF4F6 /* Roboto-Italic.ttf */; };
+		18BFD8F62545FF6B008AF4F6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18BFD8F02545FF69008AF4F6 /* Roboto-Light.ttf */; };
+		18BFD8F72545FF6B008AF4F6 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18BFD8F12545FF6A008AF4F6 /* Roboto-BoldItalic.ttf */; };
+		18BFD8F82545FF6B008AF4F6 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18BFD8F22545FF6A008AF4F6 /* Roboto-Bold.ttf */; };
+		18BFD8F92545FF6B008AF4F6 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18BFD8F32545FF6A008AF4F6 /* Roboto-Medium.ttf */; };
+		18BFD8FA2545FF6B008AF4F6 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18BFD8F42545FF6B008AF4F6 /* Roboto-Regular.ttf */; };
+		18BFD904254601AC008AF4F6 /* MovesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD903254601AC008AF4F6 /* MovesModel.swift */; };
+		18BFD9092546020F008AF4F6 /* MovesResDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFD9082546020F008AF4F6 /* MovesResDTO.swift */; };
 		4DF2ECC7B51973DD4B82BB7F /* Pods_PokemonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BFA6BEE5E9D572A3B0D34B /* Pods_PokemonUITests.framework */; };
 		58C195F12C74CF69FC6E637A /* Pods_Pokemon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6288F860BFC64E902D286CCC /* Pods_Pokemon.framework */; };
 		F8FCFB4496BF52E8665A1948 /* Pods_PokemonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B94DB2885C99AD923205A3 /* Pods_PokemonTests.framework */; };
@@ -151,6 +159,14 @@
 		18BFD8962545CAFD008AF4F6 /* PokemonDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailRepository.swift; sourceTree = "<group>"; };
 		18BFD8A52545CEA2008AF4F6 /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 		18BFD8AA2545CEB7008AF4F6 /* PokemonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewModel.swift; sourceTree = "<group>"; };
+		18BFD8EF2545FF69008AF4F6 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		18BFD8F02545FF69008AF4F6 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		18BFD8F12545FF6A008AF4F6 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		18BFD8F22545FF6A008AF4F6 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		18BFD8F32545FF6A008AF4F6 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		18BFD8F42545FF6B008AF4F6 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		18BFD903254601AC008AF4F6 /* MovesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesModel.swift; sourceTree = "<group>"; };
+		18BFD9082546020F008AF4F6 /* MovesResDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesResDTO.swift; sourceTree = "<group>"; };
 		1A323C42FD124ED57E3E6619 /* Pods-PokemonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonTests.debug.xcconfig"; path = "Target Support Files/Pods-PokemonTests/Pods-PokemonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		28483C6CB3054D8DC2753C25 /* Pods-Pokemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon.release.xcconfig"; path = "Target Support Files/Pods-Pokemon/Pods-Pokemon.release.xcconfig"; sourceTree = "<group>"; };
 		2A62D5171210049158F78677 /* Pods-Pokemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon.debug.xcconfig"; path = "Target Support Files/Pods-Pokemon/Pods-Pokemon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +241,7 @@
 				18BFD5722544877C008AF4F6 /* db */,
 				18BFD576254487BE008AF4F6 /* entity */,
 				18BFD52F25447F71008AF4F6 /* dto */,
+				18BFD8FE2545FF77008AF4F6 /* supporting files */,
 				18BFD43425446C38008AF4F6 /* Assets.xcassets */,
 				18BFD43925446C38008AF4F6 /* Info.plist */,
 				18BFD43025446C33008AF4F6 /* PokemonApp.swift */,
@@ -339,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				18BFD51925447708008AF4F6 /* PokemonModel.swift */,
+				18BFD903254601AC008AF4F6 /* MovesModel.swift */,
 				18BFD52525447E4E008AF4F6 /* PokemonPageModel.swift */,
 				18BFD792254514CA008AF4F6 /* MenuItemModel.swift */,
 				18BFD7F5254541AA008AF4F6 /* GenerationModel.swift */,
@@ -357,6 +375,7 @@
 				18BFD55925448394008AF4F6 /* ErrorDTO.swift */,
 				18BFD56825448713008AF4F6 /* ResDTO.swift */,
 				18BFD85C2545C1EE008AF4F6 /* PokemonDetailResDTO.swift */,
+				18BFD9082546020F008AF4F6 /* MovesResDTO.swift */,
 			);
 			path = dto;
 			sourceTree = "<group>";
@@ -442,6 +461,27 @@
 				18BFD8AA2545CEB7008AF4F6 /* PokemonDetailViewModel.swift */,
 			);
 			path = pokemondetail;
+			sourceTree = "<group>";
+		};
+		18BFD8FE2545FF77008AF4F6 /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				18BFD8FF2545FF7F008AF4F6 /* font */,
+			);
+			path = "supporting files";
+			sourceTree = "<group>";
+		};
+		18BFD8FF2545FF7F008AF4F6 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				18BFD8F22545FF6A008AF4F6 /* Roboto-Bold.ttf */,
+				18BFD8F12545FF6A008AF4F6 /* Roboto-BoldItalic.ttf */,
+				18BFD8EF2545FF69008AF4F6 /* Roboto-Italic.ttf */,
+				18BFD8F02545FF69008AF4F6 /* Roboto-Light.ttf */,
+				18BFD8F32545FF6A008AF4F6 /* Roboto-Medium.ttf */,
+				18BFD8F42545FF6B008AF4F6 /* Roboto-Regular.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 		49C08D177F70F03B076B6DC2 /* Frameworks */ = {
@@ -584,6 +624,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BFD43825446C38008AF4F6 /* Preview Assets.xcassets in Resources */,
+				18BFD8F52545FF6B008AF4F6 /* Roboto-Italic.ttf in Resources */,
+				18BFD8FA2545FF6B008AF4F6 /* Roboto-Regular.ttf in Resources */,
+				18BFD8F82545FF6B008AF4F6 /* Roboto-Bold.ttf in Resources */,
+				18BFD8F92545FF6B008AF4F6 /* Roboto-Medium.ttf in Resources */,
+				18BFD8F62545FF6B008AF4F6 /* Roboto-Light.ttf in Resources */,
+				18BFD8F72545FF6B008AF4F6 /* Roboto-BoldItalic.ttf in Resources */,
 				18BFD43525446C38008AF4F6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -735,6 +781,7 @@
 				18BFD4D825447547008AF4F6 /* ColorExtension.swift in Sources */,
 				18BFD4FC25447667008AF4F6 /* PokemonListView.swift in Sources */,
 				18BFD7852545132A008AF4F6 /* MenuViewModel.swift in Sources */,
+				18BFD904254601AC008AF4F6 /* MovesModel.swift in Sources */,
 				18BFD8922545C9A1008AF4F6 /* PokemonDetailWS.swift in Sources */,
 				18BFD7EC25453F8A008AF4F6 /* GenerationWS.swift in Sources */,
 				18BFD7F12545413D008AF4F6 /* GenerationResDTO.swift in Sources */,
@@ -773,6 +820,7 @@
 				18BFD4CE254474E7008AF4F6 /* DefaultsConfig.swift in Sources */,
 				18BFD5BE25448C20008AF4F6 /* ListPageView.swift in Sources */,
 				18BFD4DD25447561008AF4F6 /* FontConfig.swift in Sources */,
+				18BFD9092546020F008AF4F6 /* MovesResDTO.swift in Sources */,
 				18BFD8972545CAFD008AF4F6 /* PokemonDetailRepository.swift in Sources */,
 				18BFD53725447F99008AF4F6 /* ResultResDTO.swift in Sources */,
 				18BFD85D2545C1EE008AF4F6 /* PokemonDetailResDTO.swift in Sources */,

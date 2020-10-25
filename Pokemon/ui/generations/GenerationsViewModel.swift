@@ -19,7 +19,7 @@ class GenerationsViewModel: ObservableObject {
     var poke: [PokemonModel] = []
     var repositoryGeneration = GenerationRepository.shared
     var repositoryPokemonDetail = PokemonDetailRepository.shared
-
+    
     private var nextPage: Int = 0
     
     
@@ -29,7 +29,8 @@ class GenerationsViewModel: ObservableObject {
     @Published var type: Int = 0
     @Published var message: String = "Please select the generation of the Pokémon"
     @Published var namePokemon: String = ""
-
+    @Published var pokemonDetail: PokemonDetailModel = .empty
+    
     func getGenerations(type: Int) {
         self.type = type
         isLoading = true
@@ -48,7 +49,7 @@ class GenerationsViewModel: ObservableObject {
     func pokemonDetail(success: @escaping () -> Void) {
         isLoading = true
         repositoryPokemonDetail.pokemonDetail(name: namePokemon) { data in
-            
+            self.pokemonDetail = data
             self.isLoading = false
             success()
         } failure: { error in

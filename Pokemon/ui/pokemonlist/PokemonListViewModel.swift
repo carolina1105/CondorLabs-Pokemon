@@ -23,6 +23,7 @@ class PokemonListViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var activeSection: Int? = nil
     @Published var namePokemon: String = ""
+    @Published var pokemonDetail: PokemonDetailModel = .empty
     
     func pokemonList() {
         isLoading = true
@@ -66,7 +67,7 @@ class PokemonListViewModel: ObservableObject {
     func pokemonDetail(success: @escaping () -> Void) {
         isLoading = true
         repositoryPokemonDetail.pokemonDetail(name: namePokemon) { data in
-            
+            self.pokemonDetail = data
             self.isLoading = false
             success()
         } failure: { error in

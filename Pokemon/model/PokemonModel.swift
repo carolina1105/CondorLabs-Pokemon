@@ -8,12 +8,12 @@
 import Foundation
 
 struct PokemonModel: Identifiable, Codable, Hashable {
-    var id: Int
+    var id: Int?
     var name: String
     var url: String
-
     
-    init(id: Int = Int.random(in: 1...200),
+    
+    init(id: Int? = Int.random(in: 1...200),
          name: String = "",
          url: String = "") {
         self.id = id
@@ -32,4 +32,10 @@ struct PokemonModel: Identifiable, Codable, Hashable {
             toModel(dto: $0)
         }
     }
+}
+
+extension PokemonModel {
+    static var empty = PokemonModel(id: .zero, 
+                                    name: "", 
+                                    url: "")
 }

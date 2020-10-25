@@ -8,9 +8,18 @@
 struct PokemonDetailResDTO: Codable {
     
     var sprites: SpritesResDTO
+    var types: [PokemonTypeResDTO]
+    var height: Int
+    var weight: Int
+    var moves: [MovesResDTO]
+    
     
     private enum CodingKeys: String, CodingKey {
         case sprites 
+        case types
+        case height
+        case weight
+        case moves
     }
     
 }
@@ -51,4 +60,10 @@ struct OfficialArtworkResDTO: Codable {
     private enum CodingKeys: String, CodingKey {
         case frontDefault = "front_default"
     }    
+}
+
+struct PokemonTypeResDTO: Codable {
+    var slot: Int
+    var type: PokemonResDTO
+    
 }

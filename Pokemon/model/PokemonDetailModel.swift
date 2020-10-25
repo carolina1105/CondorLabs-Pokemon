@@ -9,14 +9,30 @@ import Foundation
 
 struct PokemonDetailModel: Codable, Hashable {
     var sprites: SpritesModel
-
-    init(sprites: SpritesModel) {
+    var types: [PokemonTypeModel]
+    var height: Int
+    var weight: Int
+    var moves: [MovesModel]
+    
+    init(sprites: SpritesModel,
+         types: [PokemonTypeModel],
+         height: Int, 
+         weight: Int,
+         moves: [MovesModel]) {
         self.sprites = sprites
+        self.types = types
+        self.height = height
+        self.weight = weight
+        self.moves = moves
         
     }
     
     static func toModel(dto: PokemonDetailResDTO) -> PokemonDetailModel {
-        let model = PokemonDetailModel(sprites: SpritesModel.toModel(dto: dto.sprites))
+        let model = PokemonDetailModel(sprites: SpritesModel.toModel(dto: dto.sprites), 
+                                       types: PokemonTypeModel.toModels(dto: dto.types),
+                                       height: dto.height,
+                                       weight: dto.weight, 
+                                       moves: MovesModel.toModels(dto: dto.moves))
         return model
     }
 }
@@ -80,4 +96,41 @@ struct OfficialArtworkModel: Codable, Hashable {
         let model = OfficialArtworkModel(frontDefault: dto.frontDefault)
         return model
     }
+}
+
+struct PokemonTypeModel: Codable, Hashable {
+    var slot: Int
+    var type: PokemonModel
+    
+    init(slot: Int,
+         type: PokemonModel) {
+        self.slot = slot
+        self.type = type
+    }
+    
+    static func toModel(dto: PokemonTypeResDTO) -> PokemonTypeModel {
+        let model = PokemonTypeModel(slot: dto.slot, 
+                                     type: PokemonModel.toModel(dto: dto.type))
+        return model
+    }
+    
+    static func toModels(dto: [PokemonTypeResDTO]) -> [PokemonTypeModel] {
+        return dto.map {
+            toModel(dto: $0)
+        }
+    }
+}
+
+
+extension PokemonDetailModel {
+    static var empty = PokemonDetailModel(sprites: SpritesModel(backDefault: "", 
+                                                                backFemale: "", 
+                                                                backShiny: "", 
+                                                                frontDefault: "", 
+                                                                frontFemale: "", 
+                                                                otherSprite: OtherSpriteModel(officialArtwork: OfficialArtworkModel(frontDefault: ""))), 
+                                          types: [PokemonTypeModel(slot: .zero, type: .empty)],
+                                          height: .zero,
+                                          weight: .zero, 
+                                          moves: [])
 }
