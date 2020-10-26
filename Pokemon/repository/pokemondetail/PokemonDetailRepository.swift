@@ -37,8 +37,4 @@ class PokemonDetailRepository {
         }
         
     }
-    
-    func dispose(with id: AnyHashable) {
-        //        database.dispose(by: id)//TODO
-    }
 }

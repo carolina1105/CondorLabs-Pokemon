@@ -74,6 +74,11 @@ struct PokemonListView: View {
             .onAppear{
                 pokemonVM.pokemonList()
             }
+            .alert(isPresented: self.$pokemonVM.showAlert) {
+                Alert(title: Text(self.pokemonVM.titleMessage),
+                      message: Text(self.pokemonVM.messageAlert),
+                      dismissButton: .destructive(Text("OK")))
+            }
         }
         ZStack {
             if self.$showMenu.wrappedValue {
@@ -122,11 +127,6 @@ struct NavigationContent: View {
         ZStack {
             NavigationLink(destination: GenerationsView(),
                            tag: generationTag,
-                           selection: $pokemonVM.activeSection) {
-                Text("")
-            }
-            NavigationLink(destination: GenerationsView(),
-                           tag: voteTag,
                            selection: $pokemonVM.activeSection) {
                 Text("")
             }

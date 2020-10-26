@@ -28,21 +28,29 @@ struct GenerationModel: Codable, Hashable  {
 
 
 extension GenerationModel {
-    static var mock = GenerationModel(name: "Slock",
-                                      pokemonSpecies: [PokemonModel(id: 1, 
-                                                                    name: "dunsparce", 
-                                                                    url: "https://pokeapi.co/api/v2/pokemon/206/",
-                                                                    votingStatus: .zero),
-                                                       PokemonModel(id: 1, 
-                                                                    name: "pikachu", 
-                                                                    url: "https://pokeapi.co/api/v2/pokemon/206/",
-                                                                    votingStatus: .zero),
-                                                       PokemonModel(id: 1, 
-                                                                    name: "sneasel", 
-                                                                    url: "https://pokeapi.co/api/v2/pokemon/206/",
-                                                                    votingStatus: .zero),
-                                                       PokemonModel(id: 1, 
-                                                                    name: "ursaring", 
-                                                                    url: "https://pokeapi.co/api/v2/pokemon/206/",
-                                                                    votingStatus: .zero)])
+    static func mock(completion: @escaping (GenerationModel) -> Void) {
+        let generationModel = GenerationModel(name: "Slock",
+                        pokemonSpecies: [PokemonModel(id: 1,
+                                                      name: "dunsparce",
+                                                      url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                                      votingStatus: .zero),
+                                         PokemonModel(id: 1,
+                                                      name: "pikachu",
+                                                      url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                                      votingStatus: .zero),
+                                         PokemonModel(id: 1,
+                                                      name: "sneasel",
+                                                      url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                                      votingStatus: .zero),
+                                         PokemonModel(id: 1,
+                                                      name: "ursaring",
+                                                      url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                                      votingStatus: .zero)])
+        completion(generationModel)
+    }
+    
+    static func mockError(completion: @escaping (AppError) -> Void ) {
+        let error: AppError = .invalidURL
+        completion(error)
+    }
 }

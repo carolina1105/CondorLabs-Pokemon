@@ -49,4 +49,25 @@ extension PokemonDetailModel {
                                           height: .zero,
                                           weight: .zero, 
                                           moves: [])
+    
+    static func mock(completion: @escaping (PokemonDetailModel) -> Void) {
+        let pokemonDetail = PokemonDetailModel(sprites: SpritesModel(backDefault: "",
+                                                 backFemale: "",
+                                                 backShiny: "",
+                                                 frontDefault: "",
+                                                 frontFemale: "",
+                                                 otherSprite: OtherSpriteModel(officialArtwork: OfficialArtworkModel(frontDefault: ""))),
+                           types: [PokemonTypeModel(slot: .zero, type: .empty)],
+                           height: .zero,
+                           weight: .zero,
+                           moves: [])
+        completion(pokemonDetail)
+    }
+    
+    static func mockError() throws -> AppError {
+        let error: AppError = .invalidURL
+        if true {
+            throw error
+        }
+    }
 }

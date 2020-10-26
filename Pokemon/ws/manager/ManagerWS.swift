@@ -7,11 +7,6 @@
 
 import Foundation
 import Alamofire
-import Firebase
-
-enum EnvironmentType: Int {
-    case local, development, production
-}
 
 fileprivate struct Empty: Codable {
 }
@@ -69,7 +64,6 @@ class ManagerWS {
                 completion(nil, fail, nil)
             }
         } catch {
-            Crashlytics.crashlytics().record(error: error)
             completion(nil, nil, ErrorDTO(error: "TEXT_TITLE_FAIL".localized))
         }
     }
@@ -92,7 +86,6 @@ class ManagerWS {
                 completion(fail, nil)
             }
         } catch {
-            Crashlytics.crashlytics().record(error: error)
             completion(nil, ErrorDTO(error: "TEXT_TITLE_FAIL".localized))
         }
     }
@@ -136,7 +129,7 @@ class ManagerWS {
                socketId: String? = nil,
                encrypted: Bool = true,
                success: @escaping (Data?) -> Void,
-               failure: @escaping (Data?, ErrorDTO?) -> Void) {
+               failure: @escaping (Data?, Error?) -> Void) {
         let headers = self.headers()
         
         let body = getBody(parameters, encrypted)
@@ -155,15 +148,9 @@ class ManagerWS {
                         success(self.getData(newData, encrypted))
                         return
                     }
-                    var errorRes = ErrorDTO.toDTO(data: response.data)
-                    errorRes?.code = response.response?.statusCode
-                    failure(nil,errorRes)
                     break
                 case .failure(let error):
-                    print("Error -> \(error)" )
-                    var errorRes = ErrorDTO.toDTO(data: response.data)
-                    errorRes?.code = response.response?.statusCode
-                    failure(nil, errorRes)
+                    failure(nil, error)
                 }
             }
     }

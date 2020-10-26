@@ -44,8 +44,20 @@ extension PokemonModel {
 }
 
 extension PokemonModel {
-    static var mock = PokemonModel(id: 1, 
-                                    name: "dunsparce", 
-                                    url: "https://pokeapi.co/api/v2/pokemon/206/",
-                                    votingStatus: .zero)
+    static func mock(completion: @escaping (PokemonModel) -> Void ) {
+        let pokemon = PokemonModel(id: 1,
+                                   name: "dunsparce",
+                                   url: "https://pokeapi.co/api/v2/pokemon/206/",
+                                   votingStatus: .zero)
+        completion(pokemon)
+    }
+    
+    static func mockError(completion: @escaping (AppError) -> Void ) {
+        let error: AppError = .invalidURL
+        completion(error)
+    }
+}
+
+enum AppError: String, Error {
+    case invalidURL = "URLSessionTask failed with error: unsupported URL"
 }

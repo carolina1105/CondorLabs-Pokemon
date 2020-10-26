@@ -34,12 +34,9 @@ class PokemonListRepository {
                 return
             } else {
                 print("Error")
+                failure("Se ha producido un error")
             }
             failure("error@@")
         }
-    }
-    
-    func dispose(with id: AnyHashable) {
-        //        database.dispose(by: id)//TODO
     }
 }

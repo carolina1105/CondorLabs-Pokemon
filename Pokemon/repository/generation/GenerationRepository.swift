@@ -37,8 +37,4 @@ class GenerationRepository {
         }
         
     }
-    
-    func dispose(with id: AnyHashable) {
-        //        database.dispose(by: id)//TODO
-    }
 }

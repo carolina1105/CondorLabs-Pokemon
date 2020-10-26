@@ -28,6 +28,8 @@ class PokemonListWS {
                             return
                         }
                       }) { (nil, error) in
+            completion(nil, nil)
+
         }
     }
 }
