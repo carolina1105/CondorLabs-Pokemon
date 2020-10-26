@@ -33,19 +33,6 @@ class PokemonDB {
         return entitiy
     }
     
-//    func pokemon(vottingSucces: Int) -> PokemonEntity? {
-//        let entitiy : PokemonEntity?
-//
-//        guard let isEntitiy: Bool = realm.objects(PokemonEntity.self).filter(byVotingStatus, 1).count > 0 else {
-//            return nil
-//        }
-//        if isEntitiy {
-//            entitiy =  realm.objects(PokemonEntity.self).filter(byVotingStatus, 1)
-//        }
-//
-//        return entitiy
-//    }
-    
     func update(by id: Int64,
                 status: Int) {
         DispatchSyncMainThreadSafe {
